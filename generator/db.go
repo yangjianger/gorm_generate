@@ -27,7 +27,7 @@ func (d *mdb) GetDataBySql(sql string) []map[string]string{
 	//查询数据库
 	query, err := d.db.Query(sql)
 	if err != nil{
-		fmt.Println("查询数据库失败", sql)
+		fmt.Println("查询数据库失败", err)
 		os.Exit(1)
 	}
 
